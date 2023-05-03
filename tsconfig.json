@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2022",
     "downlevelIteration": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -17,7 +17,11 @@
     "incremental": true,
     "paths": {
       "@components/*": ["./*"]
-    }
+    },
+    "typeRoots": [
+      "node_modules/@types",
+      "custom_typings/"
+    ] 
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

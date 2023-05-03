@@ -2,11 +2,15 @@ import { KeenSliderInstance, KeenSliderPlugin, TrackDetails, useKeenSlider } fro
 import React, { useState } from 'react'
 import Link from 'next/link'
 
+interface SlideProp {
+  bg: string
+  link: string
+  buttonText: string
+  text: string 
+}
+
 interface SlideProps {
-  bg: string[]
-  links: string[]
-  buttonTexts: string[]
-  texts: string []
+  slides: SlideProp[]
 }
 
 const AdaptiveHeight: KeenSliderPlugin = (slider) => {
@@ -17,24 +21,6 @@ const AdaptiveHeight: KeenSliderPlugin = (slider) => {
     slider.on("created", updateHeight)
     slider.on("slideChanged", updateHeight)
   }
-
-  function SetButtonTexts (slideProps:SlideProps) {
-      if (slideProps.buttonTexts.length == 0) return {}
-      for (let index = 0; index < slideProps.buttonTexts.length; index++) {
-        const element = document.getElementById(`button-${index}`);
-        if(element == null) return {}
-        element.innerHTML = slideProps.buttonTexts[index];
-      }
-  };
-
-  function SetText (slider:KeenSliderInstance, slideProps:SlideProps) {
-    if (slideProps.texts.length == 0) return {}
-    for (let index = 0; index < slideProps.texts.length; index++) {
-      const element = document.getElementById(`text-${index}`);
-      if(element == null) return {}
-      element.innerHTML = slideProps.texts[index];
-    }
-};
 
 const Slider = (slideProps:SlideProps) => {
     const [details, setDetails] = React.useState<TrackDetails | null>(null)
@@ -63,8 +49,6 @@ const Slider = (slideProps:SlideProps) => {
         },
         created(s){
           setLoaded(true)
-          SetButtonTexts(slideProps)
-          SetText(s, slideProps)
         },
         slideChanged(s) {
             setCurrentSlide(s.track.details.rel)
@@ -84,19 +68,19 @@ const Slider = (slideProps:SlideProps) => {
             transform: `scale(${scale}, ${((slide == details.slides[currentSlide]) ? 1.1 : scale)})`,
             WebkitTransform: `scale(${scale}, ${scale})`,
             opacity: scale,
-            maxWidth: 350
+            maxWidth: screenWidth < 1024 ? 350 : 450
         }
     }
     return (
         <div ref={sliderRef} className="keen-slider zoom-out flex flex-row">
-            {slideProps.bg.map((src, idx) => (
+            {slideProps.slides.map((src, idx) => (
             <div key={idx} className="keen-slider__slide zoom-out__slide">
                 <div style={scaleStyle(idx)} className='h-screen md:h-[90vh] md:mx-auto transition-all duration-150'>
                     <div className=' h-screen md:h-[90vh] md:flex-grow-0 flex-col flex'>
                         <div className='h-full bg-ascent bg-cover bg-center md:rounded-2xl md:shadow-2xl md:shadow-black'></div>
-                          <p id={`text-${idx}`} className='absolute font-valorant text-6xl top-16 left-[10%] w-0'></p>
-                          <Link href={slideProps.links[idx]} className='absolute bottom-[10%] left-1/2 -translate-x-2/4  h-[10%] w-2/4 mx-auto text-center flex-shrink-1'>
-                            <button id={`button-${idx}`} className='w-full h-full border-white border font-valorant transition hover:scale-110 z-30'></button>
+                          <p className='absolute font-valorant text-6xl top-16 left-[10%] w-0'>{slideProps.slides[idx].text}</p>
+                          <Link href={slideProps.slides[idx].link} className='absolute bottom-[10%] left-1/2 -translate-x-2/4  h-[10%] w-2/4 mx-auto text-center flex-shrink-1'>
+                            <button className='w-full h-full border-white border font-valorant transition hover:scale-110 z-30'>{slideProps.slides[idx].buttonText}</button>
                           </Link>
                     </div>
                 </div>
