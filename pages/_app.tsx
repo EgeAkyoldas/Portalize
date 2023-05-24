@@ -1,11 +1,13 @@
 import '@components/styles/globals.css'
 import type { AppProps } from 'next/app'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ThemeProvider } from "@material-tailwind/react";
 
 export default function App({ Component, pageProps }: AppProps) {
+  
   return (
-    <div>
+
+    <ThemeProvider>
       <Component {...pageProps} />
-    </div>
+      </ThemeProvider>
   )
 }
