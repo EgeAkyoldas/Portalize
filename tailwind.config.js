@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} **/
 import mt from "@material-tailwind/react/utils/withMT";
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 export default mt({
   content: [
@@ -13,12 +14,22 @@ export default mt({
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'Hero': 'url(/img/landing-page/herobg.png)'
+        'Hero': 'url(/videos/herobg.mp4)'
       },
       fontFamily: { 
         'valorant' : ['valorant', 'sans-serif'],
-        body: ["Source Sans Pro", "sans-serif"],
-      }
+        body: ["Gilroy", "sans-serif", defaultTheme.fontFamily.sans],
+      },
+      animation: {
+        'InfScroll': 'scroll 10s linear infinite',
+      },
+      keyframes: {
+        scroll:{
+          '0%': { transform: 'translate(0, 0)' },
+        '100%': { transform: 'translate(-50%, 0)' },
+        }
+        
+      },
     },
   },
   plugins: [],

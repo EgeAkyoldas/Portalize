@@ -8,11 +8,11 @@ import GameCard from "./components/gamecard"
 export default function Home() {
   return (
     <>
-      <main className="w-[100vw]">
+      <main className="w-[100vw] font-body">
         <div className="hero-section">
           <div className="relative w-[100vw] h-[100vh] bg-Hero bg-cover bg-no-repeat">
-            <p className="absolute bottom-[25%] left-3 md:left-24 text-5xl xl:text-8xl font-light text-center md:text-start text-white">Create your 3D Space<br /><span className="font-bold text-2xl xl:text-4xl">With No-Code System</span><br /><span className="text-lg xl:text-5xl">Create 3D spaces without code knowledge and share your own domain. <br /> Explore Many Experiance and Communitys</span></p>
-            <span className="absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:left-24 bottom-[14%] md:bottom-[16%]"><Button>LAUNCH EDITOR</Button></span>
+            <p className="absolute bottom-[25%] w-[85%] left-3 md:left-24 text-5xl xl:text-8xl font-light text-center md:text-start text-white">Create your 3D Space<br /><span className="font-bold text-2xl xl:text-4xl">With No-Code System</span><br /><span className="text-lg xl:text-5xl">Create 3D spaces without code knowledge and share your own domain. <br /> Explore Many Experiance and Communitys</span></p>
+            <span className="absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:left-24 bottom-[14%] md:bottom-[14%]"><Button>LAUNCH EDITOR</Button></span>
           </div>
         </div>
         <div className="cta-section">
@@ -42,7 +42,7 @@ export default function Home() {
               <p className="absolute align-middle top-1/2 -translate-y-1/2  md:left-24 z-10 text-2xl font-light sm:text-5xl md:text-8xl text-center md:text-start w-full"><span className="font-bold">Referance</span> Hall</p>
             </div>
             <div className="block md:relative">
-              <Image src={"/img/landing-page/room-bg1.png"} className="absolute top-[20%] md:top-[50%] md:-translate-y-1/2 z-0" alt="roombg1" width={1164} height={615} quality={80}></Image>
+              <Image src={"/img/landing-page/room-bg1.png"} className="absolute top-[20%] md:top-[50%] md:-translate-y-1/2 z-0 right-0" alt="roombg1" width={1164} height={615} quality={80}></Image>
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function Home() {
               <p className="absolute align-middle top-1/2 -translate-y-1/2  md:left-24 z-10 text-2xl font-light sm:text-5xl md:text-8xl text-center md:text-start w-full"><span className="font-bold">Referance</span> Hall</p>
             </div>
             <div className="block md:relative">
-              <Image src={"/img/landing-page/room-bg1.png"} className="absolute top-[20%] md:top-[50%] md:-translate-y-1/2 z-0" alt="roombg1" width={1164} height={615} quality={80}></Image>
+              <Image src={"/img/landing-page/room-bg1.png"} className="absolute top-[20%] md:top-[50%] md:-translate-y-1/2 z-0 right-0" alt="roombg1" width={1164} height={615} quality={80}></Image>
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function Home() {
         <div className="pricing-section">
           <div className="relative w-[100vw] h-[2400px] md:h-[100vh]">
             <div className="absolute top-[10%] left-1/2 -translate-x-1/2 md:-translate-x-0 md:left-20 text-7xl font-light"><p>Join <span className="font-bold">Today</span></p></div>
-            <div className="absolute grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 bottom-0 top-[15%] md:top-[50%] md:-translate-y-1/2 left-1/2 -translate-x-1/2 scale-90 w-[100vw] justify-center place-items-center">
+            <div className="absolute grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-3 bottom-0 top-[15%] md:top-[50%] md:-translate-y-1/2 left-1/2 -translate-x-1/2 scale-90 w-[100vw] justify-center place-items-center">
                 <PricingCard/>
                 <PricingCard/>
                 <PricingCard/>
