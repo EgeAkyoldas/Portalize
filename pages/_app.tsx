@@ -1,13 +1,19 @@
 import '@components/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from "@material-tailwind/react";
+import { SessionProvider, useSession } from "next-auth/react"
+import { Navbar } from './components/Navbar';
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps: {session , ...pageProps}, }: AppProps) {
+
+
   
   return (
-
-    <ThemeProvider>
-      <Component {...pageProps} />
+    <SessionProvider session={session}>
+      <ThemeProvider>
+        
+        <Component {...pageProps} />
       </ThemeProvider>
+    </SessionProvider>
   )
 }

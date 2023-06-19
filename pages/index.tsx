@@ -3,15 +3,18 @@ import Image from 'next/image';
 import Button from "./components/button"
 import PricingCard from "./components/pricingcard"
 import GameCard from "./components/gamecard"
+import { Navbar } from "./components/Navbar";
+
 
 
 export default function Home() {
   return (
     <>
+     <Navbar/>
       <main className="w-[100vw] font-body">
         <div className="hero-section">
           <div className="relative w-[100vw] h-[100vh] bg-Hero bg-cover bg-no-repeat">
-            <p className="absolute bottom-[25%] w-[85%] left-3 md:left-24 text-5xl xl:text-8xl font-light text-center md:text-start text-white">Create your 3D Space<br /><span className="font-bold text-2xl xl:text-4xl">With No-Code System</span><br /><span className="text-lg xl:text-5xl">Create 3D spaces without code knowledge and share your own domain. <br /> Explore Many Experiance and Communitys</span></p>
+            <p className="absolute bottom-[35%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-6xl font-light text-center md:text-start text-white">Create your 3D Space<br /><span className="font-bold text-2xl xl:text-2xl">With No-Code System</span><br /><span className="text-lg xl:text-3xl">Create 3D spaces without code knowledge and share your own domain. <br /> Explore Many Experiance and Communitys</span></p>
             <span className="absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:left-24 bottom-[14%] md:bottom-[14%]"><Button>LAUNCH EDITOR</Button></span>
           </div>
         </div>

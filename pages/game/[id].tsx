@@ -8,31 +8,33 @@ import {
 } from "@material-tailwind/react";
 
 
-export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/worlds/6488fdfb9d52beb18ed2c4d6');
-  const gData = await res.json()
-  const gameData = JSON.stringify(gData);
-  console.log(gameData)
+
+
+export const getServerSideProps = async(req) => {
+    const {id} = req.query
+  const [floormapRes, interiorRes] = await Promise.all([fetch(`http://localhost:3000/api/worlds/floormap/${id}`), fetch(`http://localhost:3000/api/worlds/interior/${id}`)]);
+  const [floormap, interior] = await Promise.all([floormapRes.json(), interiorRes.json()])
+  const [floormapdata, interiordata] = await Promise.all([JSON.stringify(floormap),JSON.stringify(interior)])
   return{
     
-    props:{gameData,},revalidate: 30,
+    props:{floormapdata, interiordata}
     
   };
   
 }
 
 
-function App({gameData}) {
+
+
+function App({floormapdata, interiordata}) {
   const[unityNumber, setUnityNumber] = useState(0);
   const[unityString, setUnityString] = useState('text');
-  var testObject = {name: 'John', age: 48, test: 21}
-  var jsonString = JSON.stringify(testObject)
  
   const { unityProvider, loadingProgression, isLoaded, sendMessage } = useUnityContext({
-    loaderUrl: "build/webgl-api-test.loader.js",
-    dataUrl: "build/webgl-api-test.data.unityweb",
-    frameworkUrl: "build/webgl-api-test.framework.js.unityweb",
-    codeUrl: "build/webgl-api-test.wasm.unityweb",
+    loaderUrl: "/build/webgl-api-test.loader.js",
+    dataUrl: "/build/webgl-api-test.data.unityweb",
+    frameworkUrl: "/build/webgl-api-test.framework.js.unityweb",
+    codeUrl: "/build/webgl-api-test.wasm.unityweb",
   });
   
   return (
@@ -54,7 +56,8 @@ function App({gameData}) {
       <Button onClick={() => sendMessage('JavascriptHook','TintGreen')}>Green</Button>
       <Button onClick={() => sendMessage('JavascriptHook', 'SetNumber', unityNumber)}>number</Button>
       <Button onClick={() => sendMessage('JavascriptHook','SetString', unityString)}>text</Button>
-      <Button onClick={() => sendMessage('JavascriptHook','SetString', gameData)}>Json</Button>
+      <Button onClick={() => sendMessage('JavascriptHook','SetString', floormapdata)}>floormapdata</Button>
+      <Button onClick={() => sendMessage('JavascriptHook','SetString', interiordata)}>interiordata</Button>
     </ButtonGroup>
     </Fragment>
   );

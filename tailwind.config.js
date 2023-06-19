@@ -10,11 +10,15 @@ export default mt({
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        'paffbg': '#202020',
+        'inputBg': '#282828',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'Hero': 'url(/videos/herobg.mp4)'
+        'Hero': 'url(/img/landing-page/herobg.png)'
       },
       fontFamily: { 
         'valorant' : ['valorant', 'sans-serif'],
@@ -28,10 +32,15 @@ export default mt({
           '0%': { transform: 'translate(0, 0)' },
         '100%': { transform: 'translate(-50%, 0)' },
         }
-        
+      
       },
+      screens: {
+        
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
   safelist: ['animate-[fade-in_1s_ease-in-out]', 'animate-[fade-in-down_1s_ease-in-out]']
 });
