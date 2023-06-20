@@ -4,45 +4,169 @@ import Button from "./components/button"
 import PricingCard from "./components/pricingcard"
 import GameCard from "./components/gamecard"
 import { Navbar } from "./components/Navbar";
-
+import img from "../../Portalize/assets/img.jpg";
 
 
 export default function Home() {
   return (
     <>
      <Navbar/>
-      <main className="w-[100vw] font-body">
+      <main className="w-[100vw] font-body bg-Hero bg-contain bg-repeat">
         <div className="hero-section">
-          <div className="relative w-[100vw] h-[100vh] bg-Hero bg-cover bg-no-repeat">
-            <p className="absolute bottom-[35%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-6xl font-light text-center md:text-start text-white">Create your 3D Space<br /><span className="font-bold text-2xl xl:text-2xl">With No-Code System</span><br /><span className="text-lg xl:text-3xl">Create 3D spaces without code knowledge and share your own domain. <br /> Explore Many Experiance and Communitys</span></p>
-            <span className="absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:left-24 bottom-[14%] md:bottom-[14%]"><Button>LAUNCH EDITOR</Button></span>
+          <div className="relative w-[100vw] h-[80vh]">
+            <p className="absolute bottom-[65%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-6xl font-light text-center md:text-start text-white"> <span>Portalize Your</span> <span style={{color: 'rgba(156, 79, 255, 1)', fontWeight: "bold"}}>World</span><br /><span className="font-light text-2xl xl:text-2xl">Influence New Way</span></p>
+          </div>
+        </div>
+        <div className="hero-section">
+          <div className="relative w-[100vw] h-[30vh] ">
+            <div className="bg-transparent container mx-auto px-4">
+          <div className="flex flex-wrap -mx-4">
+            <div className="w-full md:w-1/3 px-4 mb-8">
+              <div className="bg-transparent rounded-lg shadow-lg p-6 flex flex-col h-full">
+                <div className="flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                  </svg>
+                </div>
+                <h2 className="text-3xl font-bold mb-2 text-center">Community Based</h2>
+                <p className="text-lg text-center">Create 3D Spaces without code knowledge and share your own domain. Explore Many Experiance and Communitys</p>
+              </div>
+            </div>
+            <div className="w-full md:w-1/3 px-4 mb-8">
+              <div className="bg-transparent rounded-lg shadow-lg p-6 flex flex-col h-full">
+                <div className="flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
+                  </svg>
+                </div>
+                <h2 className="text-3xl font-bold mb-2 text-center" >User Friendly</h2>
+                <p className="text-lg text-center">Create 3D Spaces without code knowledge and share your own domain. Explore Many Experiance and Communitys</p>
+              </div>
+            </div>
+            <div className="w-full md:w-1/3 px-4 mb-8">
+              <div className="bg-transparent rounded-lg shadow-lg p-6 flex flex-col h-full">
+                <div className="flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+                <h2 className="text-3xl font-bold mb-2 text-center">Marketplace</h2>
+                <p className="text-lg text-center">Create 3D Spaces without code knowledge and share your own domain. Explore Many Experiance and Communitys</p>
+              </div>
+            </div>
+          </div>
+            </div>
           </div>
         </div>
         <div className="cta-section">
-          
-          <div className="relative w-[100vw] h-[700px] text-center">
-            <div className="absolute w-full place-content-center gap-5 -z-10 opacity-30 flex top-1/2 -translate-y-[35%] left-1/2 -translate-x-1/2 overflow-hidden">
-              <GameCard/>
-              <GameCard/>
-              <GameCard/>
-              <GameCard/>
-              <GameCard/>
-              <GameCard/>
-              <GameCard/>
+        <div className="relative w-[100vw] h-[30vh]">
+            <p className="absolute bottom-[10%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-6xl font-bold text-center md:text-start text-white">Explore New Worlds<br/></p>
+        </div>
+        <div className="container mx-auto px-4">
+          <div className="flex flex-row  ">
+            <div className="flex space-x-10">
+              <div style={{backgroundColor:"#303030", borderRadius: "29px"}} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{borderRadius: "0px 0px 40px 40px"}} className="w-full" src={img} alt="Card Image" height={200}/>
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Poker House</div>
+                    <p className="text-white-700 text-center">Community Space</p>
+                </div>
+              </div>
+              <div style={{backgroundColor:"#303030", borderRadius: "29px"}} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{borderRadius: "0px 0px 40px 40px"}} className="w-full" src={img} alt="Card Image"  height={200}/>
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Residance</div>
+                    <p className="text-white-700 text-center">Art</p>
+                </div>
+              </div>
+              <div style={{backgroundColor:"#303030", borderRadius: "29px"}} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{borderRadius: "0px 0px 40px 40px"}} className="w-full" src={img} alt="Card Image"  height={200}/>
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Boson Pro</div>
+                    <p className="text-white-700 text-center">Business Space</p>
+                </div>
+              </div>
+              <div style={{backgroundColor:"#303030", borderRadius: "29px"}} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{borderRadius: "0px 0px 40px 40px"}} className="w-full" src={img} alt="Card Image"  height={200}/>
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Neon Club</div>
+                    <p className="text-white-700 text-center">Music</p>
+                </div>
+              </div>
+              <div style={{backgroundColor:"#303030", borderRadius: "29px"}} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{borderRadius: "0px 0px 40px 40px"}} className="w-full" src={img} alt="Card Image"  height={200}/>
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Soul Magic</div>
+                    <p className="text-white-700 text-center">Game</p>
+                </div>
+              </div>         
             </div>
-            <p className="absolute bottom-[50%] translate-y-1/2  md:left-1/2 md:-translate-x-1/2 text-5xl font-light">Get Start Creating Your New Space</p>
-            <ul className="absolute w-full md:flex grid grid-rows-4 justify-center bottom-[10%] md:bottom-[28%]  md:left-1/2 md:-translate-x-1/2 font-bold gap-2 md:gap-6 text-3xl md:text-4xl uppercase place-items-center">
-              <li>Domain Based</li>
-              <li>Blockchain</li>
-              <li>No-Code</li>
-              <li>1000+ Assets</li>
-            </ul>
           </div>
         </div>
+        <div className="relative w-[100vw] h-[15vh] ">
+            <p className="absolute bottom-[20%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-6xl font-bold text-center md:text-start text-white">Featured<br/></p>
+        </div>
+        <div className="container mx-auto px-4">
+          <div className="flex flex-row  ">
+            <div className="flex space-x-10">
+              <div style={{backgroundColor:"#303030", borderRadius: "29px"}} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{borderRadius: "0px 0px 40px 40px"}} className="w-full" src={img} alt="Card Image" height={200}/>
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Poker House</div>
+                    <p className="text-white-700 text-center">Community Space</p>
+                </div>
+              </div>
+              <div style={{backgroundColor:"#303030", borderRadius: "29px"}} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{borderRadius: "0px 0px 40px 40px"}} className="w-full" src={img} alt="Card Image"  height={200}/>
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Residance</div>
+                    <p className="text-white-700 text-center">Art</p>
+                </div>
+              </div>
+              <div style={{backgroundColor:"#303030", borderRadius: "29px"}} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{borderRadius: "0px 0px 40px 40px"}} className="w-full" src={img} alt="Card Image"  height={200}/>
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Boson Pro</div>
+                    <p className="text-white-700 text-center">Business Space</p>
+                </div>
+              </div>
+              <div style={{backgroundColor:"#303030", borderRadius: "29px"}} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{borderRadius: "0px 0px 40px 40px"}} className="w-full" src={img} alt="Card Image"  height={200}/>
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Neon Club</div>
+                    <p className="text-white-700 text-center">Music</p>
+                </div>
+              </div>
+              <div style={{backgroundColor:"#303030", borderRadius: "29px"}} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{borderRadius: "0px 0px 40px 40px"}} className="w-full" src={img} alt="Card Image"  height={200}/>
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Soul Magic</div>
+                    <p className="text-white-700 text-center">Game</p>
+                </div>
+              </div>         
+            </div>
+          </div>
+        </div>       
+      </div>
+      <div style={{marginTop: "80px"}} className="flex items-center justify-center">
+        <div className="max-w-md relative w-[80vw] h-[20vh] ">
+          <button className="bg-gradient-to-r from-transparent via-transparent to-transparent via-purple-500 bg-clip-text text-transparent border-2 border-gray-700 hover:border-purple-500 hover:bg-purple-500 hover:text-white font-bold py-2 px-4 rounded-full w-full text-white">
+            Explore All Spaces
+          </button>
+       </div>
+      </div>
         <div className="room-section">
           <div className="relative w-[100vw] h-[100vh] md:h-[80vh] md:grid md:grid-cols-2">
             <div className="block md:relative"> 
-              <p className="absolute align-middle top-1/2 -translate-y-1/2  md:left-24 z-10 text-2xl font-light sm:text-5xl md:text-8xl text-center md:text-start w-full"><span className="font-bold">Referance</span> Hall</p>
+              <p className="absolute align-middle top-1/2 -translate-y-1/2  md:left-24 z-10 text-2xl font-light sm:text-5xl md:text-8xl text-center md:text-start w-full">
+                <span 
+                className="font-bold">Analytics
+                </span>
+                  <br/>
+                <span style={{fontSize:"40px", fontWeight:"lighter"}}>
+                Create 3D Spaces without code knowledge and share your own domain. Explore Many Experiance and Communitys
+                  </span> 
+                </p>
             </div>
             <div className="block md:relative">
               <Image src={"/img/landing-page/room-bg1.png"} className="absolute top-[20%] md:top-[50%] md:-translate-y-1/2 z-0 right-0" alt="roombg1" width={1164} height={615} quality={80}></Image>
@@ -56,7 +180,8 @@ export default function Home() {
               <Image src={"/img/landing-page/room-bg2.png"} className="absolute top-[20%] md:top-[50%] md:-translate-y-1/2 z-0" alt="roombg1" width={1164} height={615} quality={80}></Image>
             </div>
             <div className="block md:relative"> 
-              <p className="absolute w-full text-center md:text-end align-middle top-1/2 -translate-y-1/2 right-24  z-10 text-2xl font-light sm:text-5xl md:text-8xl"><span className="font-bold">Referance</span> Hall</p>
+              <p className="absolute w-full text-center md:text-end align-middle top-1/2 -translate-y-1/2 right-24  z-10 text-2xl font-light sm:text-5xl md:text-8xl">
+                <span className="font-bold">Analytics</span> Hall</p>
             </div>
             
           </div>
