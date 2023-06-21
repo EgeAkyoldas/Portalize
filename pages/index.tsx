@@ -1,7 +1,9 @@
 import React from "react";
 import Image from 'next/image';
 import Button from "./components/button"
-import PricingCard from "./components/pricingcard"
+import PricingCardF from "./components/pricingcard-free"
+import PricingCardP from "./components/pricingcard-pro"
+import PricingCardB from "./components/pricingcard-business"
 import GameCard from "./components/gamecard"
 import { Navbar } from "./components/Navbar";
 import img from "../../Portalize/assets/img.jpg";
@@ -157,13 +159,47 @@ export default function Home() {
       </div>
         <div className="room-section">
           <div className="relative w-[100vw] h-[100vh] md:h-[80vh] md:grid md:grid-cols-2">
-            <div className="block md:relative"> 
-              <p className="absolute align-middle top-1/2 -translate-y-1/2  md:left-24 z-10 text-2xl font-light sm:text-5xl md:text-8xl text-center md:text-start w-full">
+            <div className="block md:relative relative w-[40vw] h-[80vh]"> 
+              <p className="absolute align-middle top-1/2 -translate-y-1/2  md:left-24 z-10 text-2xl font-light sm:text-5xl md:text-6xl text-center md:text-start w-full">
                 <span 
                 className="font-bold">Analytics
                 </span>
                   <br/>
-                <span style={{fontSize:"40px", fontWeight:"lighter"}}>
+                  <br/>
+                  <div className="flex justify-end opacity-50 border border-white block "></div>
+                  <br/>
+                <span className="sm:text-4xl" style={{fontWeight:"lighter", lineHeight: "46px"}}>
+                Create 3D Spaces without code knowledge and share your own domain. Explore Many Experiance and Communitys
+                  </span> 
+                </p>
+            </div>
+            <div className="block md:relative">
+              <Image src={"/img/landing-page/room-bg1.png"} className="absolute top-[20%] md:top-[50%] md:-translate-y-1/2 z-0 right-0" alt="roombg1" width={1164} height={615} quality={80}></Image>
+            </div>
+          </div>
+        </div>       
+        
+        <div className="room-section h-[80vh]">
+        <div className="relative w-[100vw] h-[20vh]">     
+        <p className="absolute w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-7xl font-bold text-center md:text-center text-white"> <span>MARKETPLACE</span><br /><span className="font-light text-2xl xl:text-5xl">ACSESS MILLIONS OF ASSET</span></p>
+          </div>
+          <div className="flex justify-center items-center w-[100%]">
+              <Image src={"/img/landing-page/room-bg1.png"} className="relative top-[20%] md:top-[50%] z-0 " alt="roombg1" width={1164} height={615} quality={80}></Image>
+            </div>
+        </div>
+
+        <div className="room-section">
+          <div className="relative w-[100vw] h-[100vh] md:h-[80vh] md:grid md:grid-cols-2">
+            <div className="block md:relative relative w-[40vw] h-[80vh]"> 
+              <p className="absolute align-middle top-1/2 -translate-y-1/2  md:left-24 z-10 text-2xl font-light sm:text-5xl md:text-6xl text-center md:text-start w-full">
+                <span 
+                className="font-bold">Ready To Use Templates
+                </span>
+                  <br/>
+                  <br/>
+                  <div className="flex justify-end opacity-50 border border-white block "></div>
+                  <br/>
+                <span className="sm:text-4xl" style={{fontWeight:"lighter", lineHeight: "46px"}}>
                 Create 3D Spaces without code knowledge and share your own domain. Explore Many Experiance and Communitys
                   </span> 
                 </p>
@@ -173,40 +209,24 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
-        <div className="room-section">
-          <div className="relative w-[100vw] h-[100vh] md:h-[80vh] md:grid md:grid-cols-2">
-          <div className="block md:relative">
-              <Image src={"/img/landing-page/room-bg2.png"} className="absolute top-[20%] md:top-[50%] md:-translate-y-1/2 z-0" alt="roombg1" width={1164} height={615} quality={80}></Image>
-            </div>
-            <div className="block md:relative"> 
-              <p className="absolute w-full text-center md:text-end align-middle top-1/2 -translate-y-1/2 right-24  z-10 text-2xl font-light sm:text-5xl md:text-8xl">
-                <span className="font-bold">Analytics</span> Hall</p>
-            </div>
-            
-          </div>
 
-          
-        </div>
-
-        <div className="room-section">
-          <div className="relative w-[100vw] h-[100vh] md:h-[80vh] md:grid md:grid-cols-2">
-            <div className="block md:relative"> 
-              <p className="absolute align-middle top-1/2 -translate-y-1/2  md:left-24 z-10 text-2xl font-light sm:text-5xl md:text-8xl text-center md:text-start w-full"><span className="font-bold">Referance</span> Hall</p>
+            <div className="room-section h-[75vh]">
+              <div className="flex justify-center items-center">
+              <div className="relative w-[60vw] h-[50vh]">
+                <Image src={img} alt="Image 1" className="absolute top-0 left-0 w-full h-full object-cover " width={1164} height={300} quality={80} style={{ zIndex: 1 , borderRadius: "33px"}}></Image>
+                <Image src={img} alt="Image 1" className="absolute top-0 left-0 w-full h-full object-cover" width={1164} height={300} quality={80} style={{ zIndex: 2, top: '20%', borderRadius: "33px" }}></Image>
+                <Image src={img} alt="Image 1" className="absolute top-0 left-0 w-full h-full object-cover" width={1164} height={300} quality={80} style={{ zIndex: 3, top: '40%', borderRadius: "33px" }}></Image>   
+              </div>
+              </div>
             </div>
-            <div className="block md:relative">
-              <Image src={"/img/landing-page/room-bg1.png"} className="absolute top-[20%] md:top-[50%] md:-translate-y-1/2 z-0 right-0" alt="roombg1" width={1164} height={615} quality={80}></Image>
-            </div>
-          </div>
-        </div>
 
         <div className="pricing-section">
           <div className="relative w-[100vw] h-[2400px] md:h-[100vh]">
             <div className="absolute top-[10%] left-1/2 -translate-x-1/2 md:-translate-x-0 md:left-20 text-7xl font-light"><p>Join <span className="font-bold">Today</span></p></div>
             <div className="absolute grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-3 bottom-0 top-[15%] md:top-[50%] md:-translate-y-1/2 left-1/2 -translate-x-1/2 scale-90 w-[100vw] justify-center place-items-center">
-                <PricingCard/>
-                <PricingCard/>
-                <PricingCard/>
+                <PricingCardF/>
+                <PricingCardP/>
+                <PricingCardB/>
             </div>
           </div>
         </div>

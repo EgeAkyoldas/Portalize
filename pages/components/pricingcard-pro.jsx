@@ -10,72 +10,68 @@ import { CheckIcon } from "@heroicons/react/24/outline";
  
 export default function PricingCard() {
   return (
-    <Card color="purple" variant="gradient" className="w-full max-w-[20rem] p-8">
+    <Card color="transparent" variant="gradient" className="w-full max-w-[25rem] p-8">
       <CardHeader
         floated={false}
         shadow={false}
         color="transparent"
-        className="m-0 mb-8 rounded-none border-b border-white/10 pb-8 text-center"
+        className="m-0 mb-8 rounded-none border-b border-white/10 pb-8 text-start"
       >
         <Typography
           variant="small"
           color="white"
-          className="font-normal uppercase"
+          className="font-gilroy font-light text-2xl leading-6 tracking-wider uppercase text-white mix-blend-hard-light opacity-60 px-4 py-2 rounded"
         >
-          standard
+          PRO
         </Typography>
         <Typography
           variant="h1"
           color="white"
           className="mt-6 flex justify-center gap-1 text-7xl font-normal"
         >
-          <span className="mt-2 text-4xl">$</span>29{" "}
-          <span className="self-end text-4xl">/mo</span>
+          <span className="font-gilroy font-light text-6xl leading-none tracking-wider text-white">$</span>9.99{" "}
+          <span className="self-end font-gilroy font-light text-6xl leading-none tracking-wider text-white">/mo</span>
         </Typography>
       </CardHeader>
       <CardBody className="p-0">
         <ul className="flex flex-col gap-4">
           <li className="flex items-center gap-4">
             <span className="rounded-full border border-white/20 bg-white/20 p-1">
-              <CheckIcon strokeWidth={2} className="h-3 w-3" />
+              <CheckIcon  strokeWidth={2} className="h-3 w-3" />
             </span>
-            <Typography className="font-normal">5 team members</Typography>
+            <Typography className="font-gilroy font-bold text-white text-2xl leading-6 tracking-tighter">Up to 10.000 User Join</Typography>
           </li>
           <li className="flex items-center gap-4">
             <span className="rounded-full border border-white/20 bg-white/20 p-1">
               <CheckIcon strokeWidth={2} className="h-3 w-3" />
             </span>
-            <Typography className="font-normal">200+ components</Typography>
+            <Typography className="font-gilroy font-bold text-white text-2xl leading-6 tracking-tighter">500+ Assets</Typography>
           </li>
           <li className="flex items-center gap-4">
             <span className="rounded-full border border-white/20 bg-white/20 p-1">
               <CheckIcon strokeWidth={2} className="h-3 w-3" />
             </span>
-            <Typography className="font-normal">40+ built-in pages</Typography>
+            <Typography className="font-gilroy font-bold text-white text-2xl leading-6 tracking-tighter">Portal System</Typography>
           </li>
           <li className="flex items-center gap-4">
             <span className="rounded-full border border-white/20 bg-white/20 p-1">
               <CheckIcon strokeWidth={2} className="h-3 w-3" />
             </span>
-            <Typography className="font-normal">1 year free updates</Typography>
-          </li>
-          <li className="flex items-center gap-4">
-            <span className="rounded-full border border-white/20 bg-white/20 p-1">
-              <CheckIcon strokeWidth={2} className="h-3 w-3" />
-            </span>
-            <Typography className="font-normal">Life time technical support</Typography>
-          </li>
+            <Typography className="font-gilroy font-bold text-white text-2xl leading-6 tracking-tighter">Ads Integration</Typography>
+          </li>          
         </ul>
       </CardBody>
       <CardFooter className="mt-12 p-0">
         <Button
           size="lg"
           color="white"
-          className="text-blue-500 hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
+          className="bg-gradient-to-br from-indigo-600 to-purple-500 rounded-md px-4 py-2 text-white "
           ripple={false}
           fullWidth={true}
+          
+          
         >
-          Buy Now
+          <span>Be</span><span> </span><span style={{color: 'white', fontWeight: "800"}}>PRO</span>
         </Button>
       </CardFooter>
     </Card>
