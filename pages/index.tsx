@@ -194,7 +194,7 @@ export default function Home() {
           <div className="relative w-full h-4/5">
             <div className="h-full flex justify-center items-center">
               <div className="max-h-full">
-                <Image src={marketplace} className="object-cover max-w-full max-h-full" style={{ borderRadius: '33px', marginTop: "-250px" }} />
+                <Image src={marketplace} className="object-cover max-w-full max-h-full" alt="roombg1" style={{ borderRadius: '33px', marginTop: "-250px" }}/>
               </div>
             </div>
           </div>
