@@ -7,6 +7,17 @@ import PricingCardB from "./components/pricingcard-business"
 import GameCard from "./components/gamecard"
 import { Navbar } from "./components/Navbar";
 import img from "../../Portalize/assets/img.jpg";
+import first from "../../Portalize/assets/1.png";
+import second from "../../Portalize/assets/2.png";
+import third from "../../Portalize/assets/3.png";
+import side1 from "../../Portalize/assets/side1.png";
+import side2 from "../../Portalize/assets/side2.png";
+import marketplace from "../../Portalize/assets/marketplace.png";
+import community from "../../Portalize/assets/icon-community.png";
+import friendly from "../../Portalize/assets/icon-friendly.png";
+import marketplaceI from "../../Portalize/assets/icon-marketplace.png";
+import Background from ".../../Portalize/assets/background.png"
+
 
 
 export default function Home() {
@@ -16,19 +27,17 @@ export default function Home() {
       <main className="w-[100vw] font-body bg-Hero bg-contain bg-repeat">
         <div className="hero-section">
           <div className="relative w-[100vw] h-[80vh]">
-            <p className="absolute bottom-[65%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-6xl font-light text-center md:text-start text-white"> <span>Portalize Your</span> <span style={{color: 'rgba(156, 79, 255, 1)', fontWeight: "bold"}}>World</span><br /><span className="font-light text-2xl xl:text-2xl">Influence New Way</span></p>
+            <p className="absolute bottom-[55%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-6xl font-light text-center md:text-start text-white"> <span>Portalize Your</span> <span style={{color: 'rgba(156, 79, 255, 1)', fontWeight: "bold"}}>World</span><br /><span className="font-light text-2xl xl:text-2xl">Influence New Way</span></p>
           </div>
         </div>
-        <div className="hero-section">
+        <div style={{marginTop:"70px"}} className="hero-section">
           <div className="relative w-[100vw] h-[30vh] ">
             <div className="bg-transparent container mx-auto px-4">
           <div className="flex flex-wrap -mx-4">
             <div className="w-full md:w-1/3 px-4 mb-8">
               <div className="bg-transparent rounded-lg shadow-lg p-6 flex flex-col h-full">
                 <div className="flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
+                  <Image className="w-[4vw]" src={community} alt="Card Image"/>                  
                 </div>
                 <h2 className="text-3xl font-bold mb-2 text-center">Community Based</h2>
                 <p className="text-lg text-center">Create 3D Spaces without code knowledge and share your own domain. Explore Many Experiance and Communitys</p>
@@ -37,9 +46,7 @@ export default function Home() {
             <div className="w-full md:w-1/3 px-4 mb-8">
               <div className="bg-transparent rounded-lg shadow-lg p-6 flex flex-col h-full">
                 <div className="flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
-                  </svg>
+                <Image className="w-[4vw]" src={friendly} alt="Card Image"/>    
                 </div>
                 <h2 className="text-3xl font-bold mb-2 text-center" >User Friendly</h2>
                 <p className="text-lg text-center">Create 3D Spaces without code knowledge and share your own domain. Explore Many Experiance and Communitys</p>
@@ -48,9 +55,7 @@ export default function Home() {
             <div className="w-full md:w-1/3 px-4 mb-8">
               <div className="bg-transparent rounded-lg shadow-lg p-6 flex flex-col h-full">
                 <div className="flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
+                <Image className="w-[4vw]" src={marketplaceI} alt="Card Image"/>    
                 </div>
                 <h2 className="text-3xl font-bold mb-2 text-center">Marketplace</h2>
                 <p className="text-lg text-center">Create 3D Spaces without code knowledge and share your own domain. Explore Many Experiance and Communitys</p>
@@ -173,56 +178,63 @@ export default function Home() {
                   </span> 
                 </p>
             </div>
-            <div className="block md:relative">
-              <Image src={"/img/landing-page/room-bg1.png"} className="absolute top-[20%] md:top-[50%] md:-translate-y-1/2 z-0 right-0" alt="roombg1" width={1164} height={615} quality={80}></Image>
+            <div className=" sm:relative h-[90vh]">
+              <Image src={side2} className="absolute top-[20%] md:top-[50%] md:-translate-y-1/2 z-0 right-0" alt="roombg1"></Image>
             </div>
           </div>
         </div>       
         
-        <div className="room-section h-[80vh]">
-        <div className="relative w-[100vw] h-[20vh]">     
-        <p className="absolute w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-7xl font-bold text-center md:text-center text-white"> <span>MARKETPLACE</span><br /><span className="font-light text-2xl xl:text-5xl">ACSESS MILLIONS OF ASSET</span></p>
+        <div className="room-section flex flex-col justify-center items-center" style={{marginTop: "150px" }}>
+          <div className="relative w-full h-1/5">
+            <p className="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 text-5xl xl:text-7xl font-bold text-center text-white">
+              <span>MARKETPLACE</span><br />
+              <span className="font-light text-2xl xl:text-5xl">ACCESS MILLIONS OF ASSETS</span>
+            </p>
           </div>
-          <div className="flex justify-center items-center w-[100%]">
-              <Image src={"/img/landing-page/room-bg1.png"} className="relative top-[20%] md:top-[50%] z-0 " alt="roombg1" width={1164} height={615} quality={80}></Image>
+          <div className="relative w-full h-4/5">
+            <div className="h-full flex justify-center items-center">
+              <div className="max-h-full">
+                <Image src={marketplace} className="object-cover max-w-full max-h-full" style={{ borderRadius: '33px', marginTop: "-250px" }} />
+              </div>
             </div>
+          </div>
         </div>
 
-        <div className="room-section">
-          <div className="relative w-[100vw] h-[100vh] md:h-[80vh] md:grid md:grid-cols-2">
-            <div className="block md:relative relative w-[40vw] h-[80vh]"> 
-              <p className="absolute align-middle top-1/2 -translate-y-1/2  md:left-24 z-10 text-2xl font-light sm:text-5xl md:text-6xl text-center md:text-start w-full">
-                <span 
-                className="font-bold">Ready To Use Templates
+        <div className="room-section" style={{marginTop: "-450px" }}>
+          <div className="relative w-full h-[100vh] md:h-[80vh] md:grid md:grid-cols-2">
+            <div className="flex items-center justify-center md:relative md:w-[40vw] md:h-[80vh]">
+              <div className="md:absolute md:inset-0 flex flex-col justify-center md:left-24 z-10 text-2xl font-light sm:text-5xl md:text-6xl text-center md:text-start">
+                <span className="font-bold">Ready To Use Templates</span>
+                <br />        
+                <div className="flex justify-end opacity-50 border border-white block"></div>
+                <br />
+                <span className="sm:text-4xl" style={{ fontWeight: "lighter", lineHeight: "46px" }}>
+                  Create 3D Spaces without code knowledge and share your own domain. Explore Many Experiences and Communities
                 </span>
-                  <br/>
-                  <br/>
-                  <div className="flex justify-end opacity-50 border border-white block "></div>
-                  <br/>
-                <span className="sm:text-4xl" style={{fontWeight:"lighter", lineHeight: "46px"}}>
-                Create 3D Spaces without code knowledge and share your own domain. Explore Many Experiance and Communitys
-                  </span> 
-                </p>
+              </div>
             </div>
-            <div className="block md:relative">
-              <Image src={"/img/landing-page/room-bg1.png"} className="absolute top-[20%] md:top-[50%] md:-translate-y-1/2 z-0 right-0" alt="roombg1" width={1164} height={615} quality={80}></Image>
+            <div className="relative">
+              <Image src={side1} className="absolute top-1/2 transform -translate-y-1/2 z-0 right-0" alt="roombg1" />
             </div>
           </div>
         </div>
 
-            <div className="room-section h-[75vh]">
-              <div className="flex justify-center items-center">
-              <div className="relative w-[60vw] h-[50vh]">
-                <Image src={img} alt="Image 1" className="absolute top-0 left-0 w-full h-full object-cover " width={1164} height={300} quality={80} style={{ zIndex: 1 , borderRadius: "33px"}}></Image>
-                <Image src={img} alt="Image 1" className="absolute top-0 left-0 w-full h-full object-cover" width={1164} height={300} quality={80} style={{ zIndex: 2, top: '20%', borderRadius: "33px" }}></Image>
-                <Image src={img} alt="Image 1" className="absolute top-0 left-0 w-full h-full object-cover" width={1164} height={300} quality={80} style={{ zIndex: 3, top: '40%', borderRadius: "33px" }}></Image>   
-              </div>
-              </div>
+
+        <div style={{marginTop: "150px" }} className="room-section h-[75vh]">
+          <div className="flex justify-center items-center">
+            <div className="relative w-[80vw] h-[60vh]">
+              <Image src={third} alt="Image 3" className="absolute top-0 left-0 w-full h-full object-cover" style={{ zIndex: 3, top: '40%', borderRadius: "33px", objectPosition: "top center" }}></Image>
+              <Image src={second} alt="Image 2" className="absolute top-0 left-0 w-full h-full object-cover" style={{ zIndex: 2, top: '20%', borderRadius: "33px" , objectPosition: "top right"}}></Image>
+              <Image src={first} alt="Image 1" className="absolute top-0 left-0 w-full h-full object-cover" style={{ zIndex: 1, borderRadius: "33px", objectPosition: "top right" }}></Image>
             </div>
+          </div>
+        </div>
+
+
 
         <div className="pricing-section">
           <div className="relative w-[100vw] h-[2400px] md:h-[100vh]">
-            <div className="absolute top-[10%] left-1/2 -translate-x-1/2 md:-translate-x-0 md:left-20 text-7xl font-light"><p>Join <span className="font-bold">Today</span></p></div>
+            <div className="absolute top-[15%] left-1/2 -translate-x-1/2 md:-translate-x-0 md:left-20 text-7xl font-light"><p>Join <span className="font-bold">Today</span></p></div>
             <div className="absolute grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-3 bottom-0 top-[15%] md:top-[50%] md:-translate-y-1/2 left-1/2 -translate-x-1/2 scale-90 w-[100vw] justify-center place-items-center">
                 <PricingCardF/>
                 <PricingCardP/>

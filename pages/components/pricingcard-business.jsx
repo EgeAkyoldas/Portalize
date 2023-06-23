@@ -65,7 +65,7 @@ export default function PricingCard() {
         <Button
           size="lg"
           color="white"
-          className="bg-gradient-to-br from-indigo-600 to-purple-500 rounded-md px-4 py-2 text-white "
+          className="bg-gradient-to-br text-transform: none; from-indigo-600 to-purple-500 rounded-md px-4 py-2 text-white "
           ripple={false}
           fullWidth={true}
           
