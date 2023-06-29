@@ -49,3 +49,45 @@ body{
 .dot.active {
   background: gray;
 }
+
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  overflow: -moz-scrollbars-none; /* Old Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+@media (max-width: 768px) {
+  .flex.flex-row.overflow-x-auto.hide-scrollbar{
+    display: flex;
+    flex-direction: row-reverse;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex.flex-row.overflow-x-auto.hide-scrollbar.background{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+}
+@media (max-width: 767px) {
+  .mobile-only {
+    display: block;
+  }
+  .browser-only {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+  .browser-only {
+    display: block;
+  }
+}
