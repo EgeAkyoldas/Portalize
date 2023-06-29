@@ -81,7 +81,7 @@ export default function Home() {
         <div  style={{marginTop: ""}} className="relative w-[100vw] h-[100vh] md:h-[20vh] ">
             <p className="absolute bottom-[20%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-6xl font-bold text-center md:text-start text-white">Explore New Worlds<br/></p>
         </div>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 mobile-only">
         <div style={{ scrollbarWidth: 'none'}} className="flex flex-row overflow-x-auto hide-scrollbar background" >
         <div className="flex  space-x-4 " >
             <div style={{ backgroundColor: "#303030", borderRadius: "29px", width: "250px", height: "300px", "@media (max-width: 768px)": { width: "200px", height: "150px" } }} className="max-w-xlg rounded overflow-hidden shadow-lg">
@@ -125,11 +125,101 @@ export default function Home() {
             </div>      
         </div>
           </div>
-        </div>    
+        </div>  
+        <div className="container mx-auto px-4 browser-only">
+        <div style={{ scrollbarWidth: 'none'}} className="flex flex-row mx-auto" >
+        <div className="flex  space-x-5 " >
+            <div style={{ backgroundColor: "#303030", borderRadius: "29px", width: "250px", height: "300px", "@media (max-width: 768px)": { width: "200px", height: "150px" } }} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{ borderRadius: "0px 0px 40px 40px", width: "100%", height: "200px", "@media (max-width: 768px)": { width: "150px", height: "150px" } }} src={img} alt="Card Image" />
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Poker House</div>
+                <p className="text-white-700 text-center md:text-xs">Community Space</p>
+              </div>
+            </div>
+            
+            <div style={{ backgroundColor: "#303030", borderRadius: "29px", width: "250px", height: "300px", "@media (max-width: 768px)": { width: "200px", height: "150px" } }} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{ borderRadius: "0px 0px 40px 40px", width: "100%", height: "200px", "@media (max-width: 768px)": { width: "150px", height: "150px" } }} src={img} alt="Card Image" />
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Residence</div>
+                <p className="text-white-700 text-center md:text-xs">Art</p>
+              </div>
+            </div>
+            
+            <div style={{ backgroundColor: "#303030", borderRadius: "29px", width: "250px", height: "300px", "@media (max-width: 768px)": { width: "200px", height: "150px" } }} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{ borderRadius: "0px 0px 40px 40px", width: "100%", height: "200px", "@media (max-width: 768px)": { width: "150px", height: "150px" } }} src={img} alt="Card Image" />
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Boson Pro</div>
+                <p className="text-white-700 text-center md:text-xs">Business Space</p>
+              </div> 
+            </div>
+
+            <div style={{ backgroundColor: "#303030", borderRadius: "29px", width: "250px", height: "300px", "@media (max-width: 768px)": { width: "200px", height: "150px" } }} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{ borderRadius: "0px 0px 40px 40px", width: "100%", height: "200px", "@media (max-width: 768px)": { width: "150px", height: "150px" } }} src={img} alt="Card Image" />
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Residence</div>
+                <p className="text-white-700 text-center md:text-xs">Art</p>
+              </div>
+            </div>
+            
+            <div style={{ backgroundColor: "#303030", borderRadius: "29px", width: "250px", height: "300px", "@media (max-width: 768px)": { width: "200px", height: "150px" } }} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{ borderRadius: "0px 0px 40px 40px", width: "100%", height: "200px", "@media (max-width: 768px)": { width: "150px", height: "150px" , order: "-1"} }} src={img} alt="Card Image" />
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Boson Pro</div>
+                <p className="text-white-700 text-center md:text-xs">Business Space</p>
+              </div> 
+            </div>      
+        </div>
+          </div>
+        </div>  
         <div className="relative w-[100vw] h-[20vh] md:h-[20vh] ">
             <p className="absolute bottom-[20%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-6xl font-bold text-center md:text-start text-white">Featured<br/></p>
         </div>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 browser-only">
+        <div style={{ scrollbarWidth: 'none'}} className="flex flex-row mx-auto" >
+        <div className="flex space-x-5 " >
+            <div style={{ backgroundColor: "#303030", borderRadius: "29px", width: "250px", height: "300px", "@media (max-width: 768px)": { width: "200px", height: "150px" } }} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{ borderRadius: "0px 0px 40px 40px", width: "100%", height: "200px", "@media (max-width: 768px)": { width: "150px", height: "150px" } }} src={img} alt="Card Image" />
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Poker House</div>
+                <p className="text-white-700 text-center md:text-xs">Community Space</p>
+              </div>
+            </div>
+            
+            <div style={{ backgroundColor: "#303030", borderRadius: "29px", width: "250px", height: "300px", "@media (max-width: 768px)": { width: "200px", height: "150px" } }} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{ borderRadius: "0px 0px 40px 40px", width: "100%", height: "200px", "@media (max-width: 768px)": { width: "150px", height: "150px" } }} src={img} alt="Card Image" />
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Residence</div>
+                <p className="text-white-700 text-center md:text-xs">Art</p>
+              </div>
+            </div>
+            
+            <div style={{ backgroundColor: "#303030", borderRadius: "29px", width: "250px", height: "300px", "@media (max-width: 768px)": { width: "200px", height: "150px" } }} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{ borderRadius: "0px 0px 40px 40px", width: "100%", height: "200px", "@media (max-width: 768px)": { width: "150px", height: "150px" } }} src={img} alt="Card Image" />
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Boson Pro</div>
+                <p className="text-white-700 text-center md:text-xs">Business Space</p>
+              </div> 
+            </div>
+
+            <div style={{ backgroundColor: "#303030", borderRadius: "29px", width: "250px", height: "300px", "@media (max-width: 768px)": { width: "200px", height: "150px" } }} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{ borderRadius: "0px 0px 40px 40px", width: "100%", height: "200px", "@media (max-width: 768px)": { width: "150px", height: "150px" } }} src={img} alt="Card Image" />
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Residence</div>
+                <p className="text-white-700 text-center md:text-xs">Art</p>
+              </div>
+            </div>
+            
+            <div style={{ backgroundColor: "#303030", borderRadius: "29px", width: "250px", height: "300px", "@media (max-width: 768px)": { width: "200px", height: "150px" } }} className="max-w-xlg rounded overflow-hidden shadow-lg">
+              <Image style={{ borderRadius: "0px 0px 40px 40px", width: "100%", height: "200px", "@media (max-width: 768px)": { width: "150px", height: "150px" , order: "-1"} }} src={img} alt="Card Image" />
+              <div className="px-6 py-4">
+                <div className="font-bold text-3xl mb-2 text-center">Boson Pro</div>
+                <p className="text-white-700 text-center md:text-xs">Business Space</p>
+              </div> 
+            </div>      
+            </div>
+          </div>
+        </div>     
+        <div className="container mx-auto px-4 mobile-only "> 
         <div style={{ scrollbarWidth: 'none'}} className="flex flex-row overflow-x-auto hide-scrollbar" >
         <div className="flex space-x-5 " >
             <div style={{ backgroundColor: "#303030", borderRadius: "29px", width: "250px", height: "300px", "@media (max-width: 768px)": { width: "200px", height: "150px" } }} className="max-w-xlg rounded overflow-hidden shadow-lg">
@@ -173,7 +263,7 @@ export default function Home() {
             </div>      
             </div>
           </div>
-        </div>      
+        </div>       
       
 
 
