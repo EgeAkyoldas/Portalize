@@ -26,8 +26,11 @@ export default function Home() {
      <Navbar/>
       <main className="w-[100vw] font-body bg-Hero bg-contain bg-repeat">
         <div className="hero-section">
-          <div className="relative w-[100vw] h-[50vh] md:h-[100vh]">
-            <p className="absolute bottom-[55%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-6xl font-light text-center md:text-start text-white"> <span>Portalize Your</span> <span style={{color: 'rgba(156, 79, 255, 1)', fontWeight: "bold"}}>World</span><br /><span className="font-light text-2xl xl:text-2xl">Influence New Way</span></p>
+          <div className="relative w-[100vw] h-[50vh] md:h-[100vh] browser-only">
+            <p className="absolute top-[10%%] bottom-[55%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-6xl font-light text-center md:text-start text-white"> <span>Portalize Your</span> <span style={{color: 'rgba(156, 79, 255, 1)', fontWeight: "bold"}}>World</span><br /><span className="font-light text-2xl xl:text-2xl">Influence New Way</span></p>
+          </div>
+          <div style={{marginTop: "20px"}} className="relative w-[100vw] h-[50vh] md:h-[100vh] mobile-only">
+            <p className="absolute top-[10%%] bottom-[55%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-3xl xl:text-6xl font-light text-left md:text-start text-white"> <span>Portalize Your</span> <span style={{color: 'rgba(156, 79, 255, 1)', fontWeight: "bold"}}>World</span><br /><span className="font-light  text-xl xl:text-2xl">Influence New Way</span></p>
           </div>
         </div>
         <div style={{marginBottom: "8rem" }} className="hero-section " >
@@ -78,10 +81,13 @@ export default function Home() {
         <div>
 
         </div>
-        <div  style={{marginTop: ""}} className="relative w-[100vw] h-[100vh] md:h-[20vh] ">
+        <div  style={{marginTop: ""}} className="relative w-[100vw] h-[100vh] md:h-[20vh] browser-only">
             <p className="absolute bottom-[20%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-6xl font-bold text-center md:text-start text-white">Explore New Worlds<br/></p>
         </div>
-        <div className="container mx-auto px-4 mobile-only">
+        <div className="relative w-[100vw] h-[100vh] md:h-[20vh] mobile-only">
+            <p className="absolute bottom-[20%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 text-4xl font-bold text-left md:text-start text-white">Explore New Worlds<br/></p>
+        </div>
+        <div style={{marginTop: "-100px"}} className="container mx-auto px-4 mobile-only">
         <div style={{ scrollbarWidth: 'none'}} className="flex flex-row overflow-x-auto hide-scrollbar background" >
         <div className="flex  space-x-4 " >
             <div style={{ backgroundColor: "#303030", borderRadius: "29px", width: "250px", height: "300px", "@media (max-width: 768px)": { width: "200px", height: "150px" } }} className="max-w-xlg rounded overflow-hidden shadow-lg">
@@ -171,9 +177,9 @@ export default function Home() {
         </div>
           </div>
         </div>  
-        <div className="relative w-[100vw] h-[20vh] md:h-[20vh] ">
+        <div className="relative w-[100vw] h-[20vh] md:h-[20vh] browser-only">
             <p className="absolute bottom-[20%] w-[85%] left-1/2 md:translate-x-0 -translate-x-1/2 md:left-24 text-5xl xl:text-6xl font-bold text-center md:text-start text-white">Featured<br/></p>
-        </div>
+        </div>    
         <div className="container mx-auto px-4 browser-only">
         <div style={{ scrollbarWidth: 'none'}} className="flex flex-row mx-auto" >
         <div className="flex space-x-5 " >
@@ -220,7 +226,7 @@ export default function Home() {
           </div>
         </div>     
         <div className="container mx-auto px-4 mobile-only "> 
-        <div style={{ scrollbarWidth: 'none'}} className="flex flex-row overflow-x-auto hide-scrollbar" >
+        <div style={{ scrollbarWidth: 'none', marginTop: "50px"}} className="flex flex-row overflow-x-auto hide-scrollbar" >
         <div className="flex space-x-5 " >
             <div style={{ backgroundColor: "#303030", borderRadius: "29px", width: "250px", height: "300px", "@media (max-width: 768px)": { width: "200px", height: "150px" } }} className="max-w-xlg rounded overflow-hidden shadow-lg">
               <Image style={{ borderRadius: "0px 0px 40px 40px", width: "100%", height: "200px", "@media (max-width: 768px)": { width: "150px", height: "150px" } }} src={img} alt="Card Image" />
@@ -347,7 +353,9 @@ export default function Home() {
         </div>
         <div className="pricing-section">
           <div className="relative w-[100vw] h-[2400px] md:h-[100vh]">
-            <div className="absolute top-[15%] left-1/2 -translate-x-1/2 md:-translate-x-0 md:left-20 text-7xl font-light"><p>Join <span className="font-bold">Today</span></p></div>
+            
+            <div className="browser-only absolute top-[15%] left-1/2 -translate-x-1/2 md:-translate-x-0 md:left-20 text-7xl font-light"><p>Join <span className="font-bold">Today</span></p></div>
+            
             <div className="absolute grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-3 bottom-0 top-[15%] md:top-[50%] md:-translate-y-1/2 left-1/2 -translate-x-1/2 scale-90 w-[100vw] justify-center place-items-center">
                 <PricingCardF/>
                 <PricingCardP/>
@@ -449,9 +457,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div  style={{marginTop: "-50px"}} className="pricing-section">
-          <div className="relative w-[100vw] h-[100vh] md:h-[100vh]">
-            <div className="absolute left-1/2 -translate-x-1/2 md:-translate-x-0 md:left-20 text-7xl font-light"><p>Join <span className="font-bold">Today</span></p></div>
+        <div style={{marginTop: "-360px"}} className="pricing-section">
+          <div className="relative w-[100vw] h-[100vh] md:h-[100vh]">   
             <div className="absolute grid grid-cols-1 gap-5 bottom-0 top-[30%] md:top-[50%] md:-translate-y-1/2 left-1/2 -translate-x-1/2 scale-90 w-[100vw] justify-center place-items-center">
                 <PricingCardF/>
                 <PricingCardP/>
